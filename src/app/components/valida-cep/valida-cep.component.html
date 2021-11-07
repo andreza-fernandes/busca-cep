@@ -1,0 +1,135 @@
+<p>&nbsp;</p>
+<div class="container">
+  <form class="well form-horizontal" #formulario="ngForm" (ngSubmit)="onSubmit(formulario)">
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="email">Nome</label>
+          <input
+            type="nome"
+            class="form-control"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome"
+            #nome="ngModel"
+            required
+            ngModel 
+          />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Digite seu email"
+            #email="ngModel"
+            required
+            ngModel 
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <div class="form-group">
+			<label for="cep">CEP</label>
+			<div class="form-inline mb-2">
+				<input
+					type="text"
+					class="form-control"
+					id="cep"
+					name="cep"
+					#cep="ngModel"
+					required
+					placeholder="Digite seu Cep"
+					(blur)="buscarCEP(cep.value, formulario)"
+					ngModel 
+					/>&nbsp;
+				<input type="button" class="btn btn-light" value="Buscar" [disabled]="buscandoCEP" (click)="buscarCEP(cep.value, formulario)">
+			</div>
+		</div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="logradouro">Endereço</label>
+          <input
+            type="text"
+            class="form-control"
+            id="logradouro"
+			name="logradouro"
+			#logradouro="ngModel"
+            placeholder="Digite seu Endereço"
+            ngModel 
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="numero">Número</label>
+          <input
+            type="text"
+            class="form-control"
+            id="numero"
+			name="numero"
+			#numero="ngModel"
+            placeholder="Digite seu Número"
+            ngModel 
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="bairro">Bairro</label>
+          <input
+            type="text"
+            class="form-control"
+            id="bairro"
+			name="bairro"
+			#bairro="ngModel"
+            placeholder="Digite seu Bairro"
+            ngModel 
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="cidade">Cidade</label>
+          <input
+            type="text"
+            class="form-control"
+            id="cidade"
+			name="cidade"
+			#cidade="ngModel"
+            placeholder="Digite seu Cidade"
+            ngModel 
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="estado">Estado</label>
+          <input
+            type="text"
+            class="form-control"
+            id="estado"
+			name="estado"
+			#estado="ngModel"
+            placeholder="Digite seu Estado" 
+			ngModel 
+          />
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [class]>Enviar Dados</button>&nbsp;
+    <button type="button" class="btn btn-warning" (click)="onClearSubmit(formulario)">Limpar Dados</button>
+  </form>
+</div>
