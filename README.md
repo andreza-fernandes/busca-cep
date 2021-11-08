@@ -47,3 +47,8 @@ Ao clicar em "detalhes" deve trazer os dados do usuário selecionado
 Atualizar os dados do usuário selecionado utilizando os dados do formulário, salvando os dados na localStorage e enviar os dados do formulário utilizando o HTTP com metodo POST para a url abaixo:
 
 https://httpbin.org/post
+
+
+![image](https://user-images.githubusercontent.com/22781044/140678543-37d1bc62-14b1-4272-86d8-28a78b65d0c6.png)
+
+#4
